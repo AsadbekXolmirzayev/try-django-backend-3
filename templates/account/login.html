@@ -1,0 +1,29 @@
+{% extends  'base.html' %}
+
+{% block title %} login {% endblock %}
+
+{% block content %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+    <form method="post" class="login">
+    {% csrf_token %}
+<!--    <div>-->
+<!--      <label for="username">Username:</label>-->
+<!--      <input type="text" required name="username" id="username" placeholder="username...">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <label for="password">Password</label>-->
+<!--      <input type="password" required name="password" id="password" placeholder="password...">-->
+<!--    </div>-->
+        {{ form.as_p }}
+      <div>
+        <button type="submit">login</button>
+      </div>
+    </form>
+    <p>
+      Agar akkountingiz bolmasa
+        <a href="{% url 'auth:register' %}">register</a> qismiga oting
+    </p>
+{% endblock %}

@@ -1,0 +1,59 @@
+/*
+.article_list li {
+    padding: 7px 0;
+}
+body {
+    background-color: powderblue;
+}
+.nav_link li {
+    display: inline-block !important;
+    margin-left: 15px !important;
+}
+.nav_link .logo img {
+    width: 120px;
+}
+form button, form input[type=submit], .btn{
+    padding: 7px 30px !important;
+    font-family: Arial !important;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    font-size: 18px !important;
+    font-weight: bolder !important;
+    cursor: pointer !important;
+    background-color: darkslateblue !important;
+}
+form button:hover, form input[type=submit]:hover, .btn{
+    background-color: cornflowerblue !important;
+    transition: .5s;
+}
+
+.search {
+    padding: 10px 5px;
+    width: 250px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.search:focus {
+    padding-left: 10px;
+    transition: 0.3s;
+}
+.search-form{
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+form.login div {
+    margin-top: 10px;
+}
+.profile{
+    float: right;
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+*/

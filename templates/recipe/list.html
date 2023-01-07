@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Recipe List{% endblock %}
+{%block content %}
+        <ol class="list-group list-group-numbered">
+            {% for recipe in recipes %}
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                      <a href="{% url 'recipes:detail' recipe.slug%}">{{ recipe.title }}</a>
+                  </div>
+                  {{ recipe.author }}
+                </div>
+                <span class="badge bg-primary rounded-pill">{{ recipe.ingredients.count }}</span>
+              </li>
+            {% endfor %}
+        </ol>
+{% endblock %}

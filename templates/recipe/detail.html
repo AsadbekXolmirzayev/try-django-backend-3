@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipe Detail{% endblock %}
+
+{% block content %}
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.title }}</h5>
+        <p class="card-text">{{ recipe.author }}</p>
+        <a href="#" class="btn btn-primary">Edit</a>
+        <a href="#" class="btn btn-danger">Delete</a>
+      </div>
+      <div class="card-footer text-muted">
+          {{ recipe.created_date }}
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      {% for ingredient in recipe.ingredients.all %}
+        <div class="col-sm-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ ingredient.title }}</h5>
+              <p class="card-text">{{ ingredient.quantity }} - {{ ingredient.get_unit_display.lower}}</p>
+
+              <a href="#" class="btn btn-primary">Edit</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+            <div class="card-footer text-muted">
+            {{ ingredient.created_date }}
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+
+{% endblock %}

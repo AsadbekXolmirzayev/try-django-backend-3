@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Add new Article{% endblock %}
+
+{% block content %}
+    {% if created %}
+        <h1>{{ object.title }}</h1>
+        <p>{{ object.content }}</p>
+        <p><code>{{ object.created_date }}</code></p>
+    {% else %}
+    <form method="post" enctype="multipart/form-data" >
+      {% csrf_token %}
+
+        {{ form.as_p}}
+      <div style="margin-top: 20px">
+        <input type="submit" value="Add new">
+      </div>
+
+    </form>
+    {% endif %}
+{% endblock %}
